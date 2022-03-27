@@ -1,7 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Typography from "@mui/material/Typography";
+import styles from "../../styles/Home.module.css";
+
+import Grid from "@mui/material/Grid";
+
+import ProjectCard from "../../components/ProjectCard";
+import projects from "../../projects";
 
 const Home: NextPage = () => {
   return (
@@ -12,9 +16,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Typography align="center" variant="h5" style={{ color: "#1a237e" }}>
-        Добро пожаловать на персональный сайт инженера-конструктора!
-      </Typography>
+      <Grid container>
+        {projects.map((project) => (
+          <Grid item key={project.name.en}>
+            <ProjectCard project={project} />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };

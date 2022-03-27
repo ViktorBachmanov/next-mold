@@ -12,8 +12,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Typography align="center" variant="h5" style={{ color: "#1a237e" }}>
-        Добро пожаловать на персональный сайт инженера-конструктора!
+      <Typography variant="body2">
+        Виктор Бачманов, инженер-конструктор
       </Typography>
     </div>
   );
