@@ -37,7 +37,9 @@ export default function Project() {
   return (
     <Box>
       <TabContext value={value}>
-        <TabList onChange={handleChange}>{tabs}</TabList>
+        <TabList onChange={handleChange} centered={true}>
+          {tabs}
+        </TabList>
         {tabPanels}
       </TabContext>
     </Box>
