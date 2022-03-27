@@ -1,0 +1,45 @@
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+
+//import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+
+import projects from "../../projects";
+
+export default function Project() {
+  const router = useRouter();
+  const { name } = router.query;
+
+  const project = projects.find((project) => project.name.en === name);
+
+  const [value, setValue] = useState("Изделие");
+
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+  };
+
+  let tabs = [];
+  let tabPanels = [];
+  for (const tabLabel in project?.tabs) {
+    tabs.push(<Tab label={tabLabel} value={tabLabel} key={tabLabel}></Tab>);
+    tabPanels.push(
+      <TabPanel value={tabLabel} key={tabLabel}>
+        {tabLabel}
+      </TabPanel>
+    );
+  }
+
+  return (
+    <Box>
+      <TabContext value={value}>
+        <TabList onChange={handleChange}>{tabs}</TabList>
+        {tabPanels}
+      </TabContext>
+    </Box>
+  );
+}
