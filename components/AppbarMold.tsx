@@ -3,12 +3,13 @@ import Link from "next/link";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
+import NavButton from "./NavButton";
 
 export default function AppbarMold() {
   return (
     <AppBar position="static" color="transparent">
       <Toolbar style={{ justifyContent: "center" }}>
-        <Link href="/" passHref>
+        {/* <Link href="/" passHref>
           <Button variant="text" component="a">
             Главная
           </Button>
@@ -22,7 +23,11 @@ export default function AppbarMold() {
           <Button variant="text" component="a">
             Автор
           </Button>
-        </Link>
+        </Link> */}
+
+        <NavButton href="/" label="Главная" />
+        <NavButton href="/projects" label="Проекты" />
+        <NavButton href="/author" label="Автор" />
       </Toolbar>
     </AppBar>
   );

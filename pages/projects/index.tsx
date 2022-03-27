@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 import ProjectCard from "../../components/ProjectCard";
 import projects from "../../projects";
 
-const Home: NextPage = () => {
+const Projects: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,4 +27,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Projects;
