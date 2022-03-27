@@ -12,7 +12,10 @@ export default function NavButton(props: Props) {
   const router = useRouter();
 
   //const color = router.asPath === href ? "success" : "inherit";
-  const variant = router.asPath === href ? "contained" : "text";
+  const isActive =
+    router.asPath === href ||
+    (router.asPath.includes("projects") && href === "/projects");
+  const variant = isActive ? "contained" : "text";
 
   return (
     <Link href={href} passHref>
