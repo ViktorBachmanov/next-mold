@@ -2,9 +2,21 @@ import AppbarMold from "./AppbarMold";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
+
 export default function Layout(props: any) {
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+
       <AppbarMold />
 
       <main>{props.children}</main>
@@ -21,6 +33,6 @@ export default function Layout(props: any) {
           </span>
         </a>
       </footer>
-    </>
+    </ThemeProvider>
   );
 }
