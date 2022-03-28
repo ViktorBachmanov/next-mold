@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 //import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -41,13 +42,24 @@ export default function Project() {
   }
 
   return (
-    <Box>
-      <TabContext value={value}>
-        <TabList onChange={handleChange} centered={true}>
-          {tabs}
-        </TabList>
-        {tabPanels}
-      </TabContext>
-    </Box>
+    <>
+      <Head>
+        <title>{`Пресс-форма "${project!.name.ru}"`}</title>
+        <meta
+          name="description"
+          content={`Пресс-форма "${project!.name.ru}"`}
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Box>
+        <TabContext value={value}>
+          <TabList onChange={handleChange} centered={true}>
+            {tabs}
+          </TabList>
+          {tabPanels}
+        </TabContext>
+      </Box>
+    </>
   );
 }
