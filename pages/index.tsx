@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Пресс-формы для литья пласмассовых изделий</title>
         <meta name="description" content="Пресс-формы, литье пластмасс" />
@@ -21,20 +21,23 @@ const Home: NextPage = () => {
         align="center"
         variant="h4"
         variantMapping={{ h4: "h1" }}
-        style={{ color: "#1a237e" }}
+        style={{ color: "#1a237e", margin: "2rem auto" }}
       >
         Пресс-формы для литья пласмассовых изделий
       </Typography>
 
-      <Typography variant="body2">
+      <Typography variant="body1" style={{ textIndent: "2em" }}>
         Здесь Вы можете заказать проектирование пресс-формы (холодноканальной),
         а также и самого изделия.
       </Typography>
 
-      <Typography variant="body2">
+      <Typography
+        variant="body1"
+        style={{ textIndent: "2em", marginTop: "1rem" }}
+      >
         В разделе "Проекты" представлены некоторые из реализованных пресс-форм.
       </Typography>
-    </div>
+    </>
   );
 };
 

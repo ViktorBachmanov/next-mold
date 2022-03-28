@@ -5,17 +5,21 @@ import Typography from "@mui/material/Typography";
 
 const Contacts: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Контакты</title>
         <meta name="description" content="Контакты" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Typography variant="body2">
-        Виктор Бачманов, инженер-конструктор
+      <Typography variant="h5" align="center" style={{ lineHeight: "200%" }}>
+        Инженер-конструктор
+        <br />
+        Виктор Бачманов
+        <br />
+        vbachmanov@mail.ru
       </Typography>
-    </div>
+    </>
   );
 };
 

@@ -9,7 +9,7 @@ import projects from "../../projects";
 
 const Projects: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Примеры пресс-форм</title>
         <meta name="description" content="Примеры пресс-форм" />
@@ -23,7 +23,7 @@ const Projects: NextPage = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </>
   );
 };
 
