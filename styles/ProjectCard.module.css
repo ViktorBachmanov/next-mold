@@ -1,0 +1,24 @@
+.card {
+  height: 100%;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardActionArea {
+  height: 100%;
+}
+
+.cardTitle {
+  flex: 0 0 auto;
+}
+
+.imageWrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

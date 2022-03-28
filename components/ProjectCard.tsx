@@ -1,6 +1,6 @@
 import React from "react";
 
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
@@ -9,6 +9,8 @@ import Typography from "@mui/material/Typography";
 
 import Image from "next/image";
 
+import styles from "../styles/ProjectCard.module.css";
+
 interface Props {
   project: any;
 }
@@ -16,16 +18,31 @@ interface Props {
 export default function ProjectCard(props: Props) {
   const { project } = props;
 
+  const router = useRouter();
+
+  const href = `projects/${project.name.en}`;
+
+  const handleClick = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    router.push(href);
+  };
+
   return (
-    <Card>
-      <Link href={`projects/${project.name.en}`} passHref>
-        <CardActionArea>
-          <CardContent>
-            <Typography>{project.name.ru}</Typography>
+    <Card className={styles.card}>
+      <CardActionArea
+        className={styles.cardActionArea}
+        href={href}
+        onClick={handleClick}
+      >
+        <CardContent className={styles.cardContent}>
+          <Typography className={styles.cardTitle}>
+            {project.name.ru}
+          </Typography>
+          <div className={styles.imageWrapper}>
             <Image src={project.cardImage} />
-          </CardContent>
-        </CardActionArea>
-      </Link>
+          </div>
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
 }

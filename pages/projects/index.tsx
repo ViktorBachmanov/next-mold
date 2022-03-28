@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../../styles/Home.module.css";
 
 import Grid from "@mui/material/Grid";
 
@@ -16,7 +15,7 @@ const Projects: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Grid container>
+      <Grid container spacing={2} style={{ justifyContent: "center" }}>
         {projects.map((project) => (
           <Grid item key={project.name.en}>
             <ProjectCard project={project} />
