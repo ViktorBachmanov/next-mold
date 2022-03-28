@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Image from "next/image";
 
 //import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -17,7 +18,7 @@ export default function Project() {
   const router = useRouter();
   const { name } = router.query;
 
-  const project = projects.find((project) => project.name.en === name);
+  const project = projects.find((project) => project.name.en === name)!;
 
   const [value, setValue] = useState("Изделие");
 
@@ -25,21 +26,23 @@ export default function Project() {
     setValue(newValue);
   };
 
-  let tabs = [];
-  let tabPanels = [];
-  for (const tabLabel in project?.tabs) {
+  let tabs: Array<any> = [];
+  let tabPanels: Array<any> = [];
+  project.tabs.forEach((tab) => {
     const typographyLabel = (
-      <Typography variant="button">{tabLabel}</Typography>
+      <Typography variant="button">{tab.label}</Typography>
     );
     tabs.push(
-      <Tab label={typographyLabel} value={tabLabel} key={tabLabel}></Tab>
+      <Tab label={typographyLabel} value={tab.label} key={tab.label}></Tab>
     );
     tabPanels.push(
-      <TabPanel value={tabLabel} key={tabLabel}>
-        {tabLabel}
+      <TabPanel value={tab.label} key={tab.label}>
+        {tab.images.map((image, index) => (
+          <Image src={image} key={index} />
+        ))}
       </TabPanel>
     );
-  }
+  });
 
   return (
     <>
@@ -51,6 +54,15 @@ export default function Project() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Typography
+        variant="h5"
+        component="h1"
+        align="center"
+        style={{ marginBottom: "1rem" }}
+      >
+        {project!.name.ru}
+      </Typography>
 
       <Box>
         <TabContext value={value}>
