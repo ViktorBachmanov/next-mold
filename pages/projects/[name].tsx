@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 import projects from "../../projects";
+import { typography } from "@mui/system";
 
 export default function Project() {
   const router = useRouter();
@@ -26,7 +27,12 @@ export default function Project() {
   let tabs = [];
   let tabPanels = [];
   for (const tabLabel in project?.tabs) {
-    tabs.push(<Tab label={tabLabel} value={tabLabel} key={tabLabel}></Tab>);
+    const typographyLabel = (
+      <Typography variant="button">{tabLabel}</Typography>
+    );
+    tabs.push(
+      <Tab label={typographyLabel} value={tabLabel} key={tabLabel}></Tab>
+    );
     tabPanels.push(
       <TabPanel value={tabLabel} key={tabLabel}>
         {tabLabel}
