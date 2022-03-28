@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import type { NextPage, InferGetStaticPropsType } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
@@ -14,11 +15,15 @@ import Box from "@mui/material/Box";
 import projects from "../../projects";
 import { typography } from "@mui/system";
 
-export default function Project() {
+const Projects = ({
+  project,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
   const { name } = router.query;
 
-  const project = projects.find((project) => project.name.en === name)!;
+  // console.log("projects: ", projects);
+  // console.log("name = router.query: ", name);
+  //const project = projects.find((project) => project.name.en === name)!;
 
   const [value, setValue] = useState("Изделие");
 
@@ -38,7 +43,11 @@ export default function Project() {
     tabPanels.push(
       <TabPanel value={tab.label} key={tab.label}>
         {tab.images.map((image, index) => (
-          <Image src={image} key={index} />
+          <Image
+            src={image}
+            key={index}
+            priority={index === 0 ? true : false}
+          />
         ))}
       </TabPanel>
     );
@@ -74,4 +83,27 @@ export default function Project() {
       </Box>
     </>
   );
+};
+
+export default Projects;
+
+export async function getStaticProps(context: any) {
+  const { name } = context.params;
+  const project = projects.find((project) => project.name.en === name)!;
+
+  return {
+    props: { project }, // will be passed to the page component as props
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { name: "slide" } },
+      { params: { name: "shocker" } },
+      { params: { name: "dish" } },
+      { params: { name: "tube" } },
+    ],
+    fallback: false,
+  };
 }

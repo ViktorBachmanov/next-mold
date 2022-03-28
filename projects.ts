@@ -6,6 +6,12 @@ import slidePfDrw from "./public/slide/sb_drw_light_tr.gif";
 import slidePfPhoto from "./public/slide/IMG00084.jpg";
 
 import shockerCard from "./public/shocker/productCard.gif";
+import shockerProduct from "./public/shocker/product.gif";
+import shockerProductDrw from "./public/shocker/product_drw.gif";
+import shockerPf from "./public/shocker/press_forma.gif";
+import shockerPfDrw1 from "./public/shocker/sb-1.gif";
+import shockerPfDrw2 from "./public/shocker/sb-2.gif";
+
 import dishCard from "./public/dish/productCard.gif";
 import tubeCard from "./public/tube/productCard.gif";
 
@@ -31,9 +37,12 @@ const projects = [
     cardImage: shockerCard,
     cardRatio: 2.1,
     tabs: [
-      { label: "Изделие", images: [slideProduct, slideProductDrw] },
-      { label: "Пресс-форма", images: [slidePf, slidePfDrw] },
-      { label: "Фото", images: [slidePfPhoto] },
+      { label: "Изделие", images: [shockerProduct, shockerProductDrw] },
+      {
+        label: "Пресс-форма",
+        images: [shockerPf, shockerPfDrw1, shockerPfDrw2],
+      },
+      { label: "Электроды", images: [] },
     ],
   },
   {
