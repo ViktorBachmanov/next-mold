@@ -11,7 +11,7 @@ export default function AppbarMold() {
       <Toolbar style={{ justifyContent: "center" }}>
         <NavButton href="/" label="Главная" />
         <NavButton href="/projects" label="Проекты" />
-        <NavButton href="/author" label="Автор" />
+        <NavButton href="/contacts" label="Контакты" />
       </Toolbar>
     </AppBar>
   );

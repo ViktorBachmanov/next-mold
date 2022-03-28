@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Typography from "@mui/material/Typography";
 
-const Home: NextPage = () => {
+const Contacts: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,4 +19,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Contacts;
