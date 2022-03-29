@@ -47,6 +47,7 @@ const Projects = ({
             src={image}
             key={index}
             priority={index === 0 ? true : false}
+            alt=""
           />
         ))}
       </TabPanel>
