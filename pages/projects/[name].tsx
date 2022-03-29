@@ -51,11 +51,10 @@ const Projects = ({
         style={{ textAlign: "center" }}
       >
         {tab.images.map((image, index) => (
-          <Card style={{ margin: "1em 0" }}>
+          <Card key={index} style={{ margin: "1em 0" }}>
             <CardContent>
               <Image
                 src={image}
-                key={index}
                 priority={index === 0 ? true : false}
                 alt=""
                 loading="eager"
@@ -87,7 +86,7 @@ const Projects = ({
         {project!.name.ru}
       </Typography>
 
-      <Box style={{ width: "100%" }}>
+      <Box>
         <TabContext value={value}>
           <TabList onChange={handleChange} centered={true}>
             {tabs}

@@ -1,14 +1,14 @@
 import slideCard from "./public/slide/productCard.gif";
 import slideProduct from "./public/slide/product.png";
 import slideProductDrw from "./public/slide/product_drw.jpg";
-import slidePf from "./public/slide/press_forma.gif";
+import slidePf from "./public/slide/press_forma.jpg";
 import slidePfDrw from "./public/slide/sb_drw_light_tr.gif";
-import slidePfPhoto from "./public/slide/IMG00084.jpg";
+import slidePfPhoto from "./public/slide/IMG00086.jpg";
 
 import shockerCard from "./public/shocker/productCard.gif";
-import shockerProduct from "./public/shocker/product.gif";
-import shockerProductDrw from "./public/shocker/product_drw.gif";
-import shockerPf from "./public/shocker/press_forma.gif";
+import shockerProduct from "./public/shocker/product.jpg";
+import shockerProductDrw from "./public/shocker/product_drw.jpg";
+import shockerPf from "./public/shocker/press_forma.jpg";
 import shockerPfDrw1 from "./public/shocker/sb-1.jpg";
 import shockerE_2 from "./public/shocker/e-2.jpg";
 
