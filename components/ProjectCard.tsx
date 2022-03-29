@@ -39,7 +39,7 @@ export default function ProjectCard(props: Props) {
             {project.name.ru}
           </Typography>
           <div className={styles.imageWrapper}>
-            <Image src={project.cardImage} />
+            <Image src={project.cardImage} alt={project.name.ru} />
           </div>
         </CardContent>
       </CardActionArea>

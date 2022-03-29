@@ -11,9 +11,13 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 
 import projects from "../../projects";
 import { typography } from "@mui/system";
+
+import styles from "../../styles/Home.module.css";
 
 const Projects = ({
   project,
@@ -41,14 +45,23 @@ const Projects = ({
       <Tab label={typographyLabel} value={tab.label} key={tab.label}></Tab>
     );
     tabPanels.push(
-      <TabPanel value={tab.label} key={tab.label}>
+      <TabPanel
+        value={tab.label}
+        key={tab.label}
+        style={{ textAlign: "center" }}
+      >
         {tab.images.map((image, index) => (
-          <Image
-            src={image}
-            key={index}
-            priority={index === 0 ? true : false}
-            alt=""
-          />
+          <Card style={{ margin: "1em 0" }}>
+            <CardContent>
+              <Image
+                src={image}
+                key={index}
+                priority={index === 0 ? true : false}
+                alt=""
+                loading="eager"
+              />
+            </CardContent>
+          </Card>
         ))}
       </TabPanel>
     );
@@ -74,7 +87,7 @@ const Projects = ({
         {project!.name.ru}
       </Typography>
 
-      <Box>
+      <Box style={{ width: "100%" }}>
         <TabContext value={value}>
           <TabList onChange={handleChange} centered={true}>
             {tabs}
