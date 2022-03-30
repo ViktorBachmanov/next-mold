@@ -34,6 +34,14 @@ import gearPf from "./public/gear/pf.jpg";
 import gearSb1 from "./public/gear/sb_1.jpg";
 import gearSb2 from "./public/gear/sb_2.jpg";
 
+import sleeveCard from "./public/sleeve/productCard.jpg";
+import sleeveProduct from "./public/sleeve/product.jpg";
+import sleeveProductDrw from "./public/sleeve/product_drw.jpg";
+import sleeveFlow from "./public/sleeve/plastic_flow1.gif";
+import sleevePf from "./public/sleeve/pf.jpg";
+import sleeveSb1 from "./public/sleeve/sb_1.jpg";
+import sleeveSb2 from "./public/sleeve/sb_2.jpg";
+
 //import StaticImageData from 'next/image'
 
 function pic(data: any, desc: string) {
@@ -139,7 +147,6 @@ const projects = [
       { label: "Фото", images: [pic(tubePhoto, "Фото")] },
     ],
   },
-
   {
     name: {
       ru: "Колесо зубчатое",
@@ -160,6 +167,31 @@ const projects = [
           pic(gearPf, "Пресс-форма"),
           pic(gearSb1, "Сборочный чертеж 1"),
           pic(gearSb2, "Сборочный чертеж 2"),
+        ],
+      },
+    ],
+  },
+  {
+    name: {
+      ru: "Муфта",
+      en: "sleeve",
+    },
+    cardImage: sleeveCard,
+    tabs: [
+      {
+        label: "Изделие",
+        images: [
+          pic(sleeveProduct, "Изделие"),
+          pic(sleeveProductDrw, "Эскиз изделия"),
+          pic(sleeveFlow, "Анализ литья"),
+        ],
+      },
+      {
+        label: "Пресс-форма",
+        images: [
+          pic(sleevePf, "Пресс-форма"),
+          pic(sleeveSb1, "Сборочный чертеж 1"),
+          pic(sleeveSb2, "Сборочный чертеж 2"),
         ],
       },
     ],

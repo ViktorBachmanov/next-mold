@@ -52,7 +52,7 @@ const Projects = ({
       >
         {tab.images.map((image, index) => (
           <Card key={index} style={{ margin: "1em 0" }} square={true}>
-            <CardContent style={{ padding: "1em 0.5em" }}>
+            <CardContent style={{ padding: "0.5em 0.5em" }}>
               <Image
                 src={image.data}
                 priority={index === 0 ? true : false}
@@ -117,6 +117,7 @@ export async function getStaticPaths() {
       { params: { name: "dish" } },
       { params: { name: "tube" } },
       { params: { name: "gear" } },
+      { params: { name: "sleeve" } },
     ],
     fallback: false,
   };
