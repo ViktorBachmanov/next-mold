@@ -13,31 +13,33 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Typography align="center" variant="body1" style={{ color: "#1a237e" }}>
-        Добро пожаловать на персональный сайт инженера-конструктора
-      </Typography>
+      <div className={styles.container}>
+        <Typography align="center" variant="body1" style={{ color: "#1a237e" }}>
+          Добро пожаловать на персональный сайт инженера-конструктора
+        </Typography>
 
-      <Typography
-        align="center"
-        variant="h4"
-        variantMapping={{ h4: "h1" }}
-        style={{ color: "#1a237e", margin: "2rem auto" }}
-      >
-        Пресс-формы для литья пласмассовых изделий
-      </Typography>
+        <Typography
+          align="center"
+          variant="h4"
+          variantMapping={{ h4: "h1" }}
+          style={{ color: "#1a237e", margin: "2rem auto" }}
+        >
+          Пресс-формы для литья пласмассовых изделий
+        </Typography>
 
-      <Typography variant="body1" style={{ textIndent: "2em" }}>
-        Здесь Вы можете заказать проектирование пресс-формы (холодноканальной),
-        а также и самого изделия.
-      </Typography>
+        <Typography variant="body1" style={{ textIndent: "2em" }}>
+          Здесь Вы можете заказать проектирование пресс-формы
+          (холодноканальной), а также и самого изделия.
+        </Typography>
 
-      <Typography
-        variant="body1"
-        style={{ textIndent: "2em", marginTop: "1rem" }}
-      >
-        В разделе &quot;Проекты&quot; представлены некоторые из реализованных
-        пресс-форм.
-      </Typography>
+        <Typography
+          variant="body1"
+          style={{ textIndent: "2em", marginTop: "1rem" }}
+        >
+          В разделе &quot;Проекты&quot; представлены некоторые из реализованных
+          пресс-форм.
+        </Typography>
+      </div>
     </>
   );
 };

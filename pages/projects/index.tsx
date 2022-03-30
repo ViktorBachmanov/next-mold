@@ -6,6 +6,8 @@ import Grid from "@mui/material/Grid";
 import ProjectCard from "../../components/ProjectCard";
 import projects from "../../projects";
 
+import styles from "../../styles/Home.module.css";
+
 const Projects: NextPage = () => {
   return (
     <>
@@ -15,7 +17,12 @@ const Projects: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Grid container spacing={2} style={{ justifyContent: "center" }}>
+      <Grid
+        container
+        spacing={2}
+        style={{ justifyContent: "center" }}
+        className={styles.container}
+      >
         {projects.map((project) => (
           <Grid item key={project.name.en}>
             <ProjectCard project={project} />

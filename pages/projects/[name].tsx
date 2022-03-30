@@ -48,10 +48,10 @@ const Projects = ({
       <TabPanel
         value={tab.label}
         key={tab.label}
-        style={{ textAlign: "center" }}
+        style={{ textAlign: "center", padding: "2rem 0" }}
       >
         {tab.images.map((image, index) => (
-          <Card key={index} style={{ margin: "1em 0" }}>
+          <Card key={index} style={{ margin: "1em 0" }} square={true}>
             <CardContent>
               <Image
                 src={image.data}
