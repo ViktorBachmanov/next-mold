@@ -15,6 +15,7 @@ import shockerE_2 from "./public/shocker/e-2.jpg";
 import dishCard from "./public/dish/productCard.gif";
 import dishProduct from "./public/dish/product.jpg";
 import dishProductDrw from "./public/dish/product_drw.jpg";
+import dishFlow from "./public/dish/plastic_flow2.gif";
 import dishPf from "./public/dish/press_forma.jpg";
 import dishPfDrw from "./public/dish/sb_1.jpg";
 
@@ -59,6 +60,7 @@ const projects = [
     cardRatio: 2,
     tabs: [
       { label: "Изделие", images: [dishProduct, dishProductDrw] },
+      { label: "Анализ", images: [dishFlow] },
       { label: "Пресс-форма", images: [dishPf, dishPfDrw] },
     ],
   },
