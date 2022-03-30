@@ -54,9 +54,9 @@ const Projects = ({
           <Card key={index} style={{ margin: "1em 0" }}>
             <CardContent>
               <Image
-                src={image}
+                src={image.data}
                 priority={index === 0 ? true : false}
-                alt=""
+                alt={image.desc}
                 loading="eager"
               />
             </CardContent>

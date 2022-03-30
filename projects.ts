@@ -21,6 +21,12 @@ import dishPfDrw from "./public/dish/sb_1.jpg";
 
 import tubeCard from "./public/tube/productCard.gif";
 
+//import StaticImageData from 'next/image'
+
+function pic(data: any, desc: string) {
+  return { data, desc };
+}
+
 const projects = [
   {
     name: {
@@ -30,9 +36,22 @@ const projects = [
     cardImage: slideCard,
     cardRatio: 2.12,
     tabs: [
-      { label: "Изделие", images: [slideProduct, slideProductDrw] },
-      { label: "Пресс-форма", images: [slidePf, slidePfDrw] },
-      { label: "Фото", images: [slidePfPhoto] },
+      //{ label: "Изделие", images: [[slideProduct, 'Изделие'], [slideProductDrw, 'Эскиз изделия']] },
+      {
+        label: "Изделие",
+        images: [
+          pic(slideProduct, "Изделие"),
+          pic(slideProductDrw, "Эскиз изделия"),
+        ],
+      },
+      {
+        label: "Пресс-форма",
+        images: [
+          pic(slidePf, "Пресс-форма"),
+          pic(slidePfDrw, "Сборочный чертеж"),
+        ],
+      },
+      { label: "Фото", images: [pic(slidePfPhoto, "Фото")] },
     ],
   },
   {
@@ -43,12 +62,21 @@ const projects = [
     cardImage: shockerCard,
     cardRatio: 2.1,
     tabs: [
-      { label: "Изделие", images: [shockerProduct, shockerProductDrw] },
+      {
+        label: "Изделие",
+        images: [
+          pic(shockerProduct, "Изделие"),
+          pic(shockerProductDrw, "Эскиз изделия"),
+        ],
+      },
       {
         label: "Пресс-форма",
-        images: [shockerPf, shockerPfDrw1],
+        images: [
+          pic(shockerPf, "Пресс-форма"),
+          pic(shockerPfDrw1, "Сборочный чертеж"),
+        ],
       },
-      { label: "Электроды", images: [shockerE_2] },
+      { label: "Электроды", images: [pic(shockerE_2, "Электрод")] },
     ],
   },
   {
@@ -59,9 +87,21 @@ const projects = [
     cardImage: dishCard,
     cardRatio: 2,
     tabs: [
-      { label: "Изделие", images: [dishProduct, dishProductDrw] },
-      { label: "Анализ", images: [dishFlow] },
-      { label: "Пресс-форма", images: [dishPf, dishPfDrw] },
+      {
+        label: "Изделие",
+        images: [
+          pic(dishProduct, "Изделие"),
+          pic(dishProductDrw, "Эскиз изделия"),
+        ],
+      },
+      { label: "Анализ", images: [pic(dishFlow, "Анализ литья")] },
+      {
+        label: "Пресс-форма",
+        images: [
+          pic(dishPf, "Пресс-форма"),
+          pic(dishPfDrw, "Сборочный чертеж"),
+        ],
+      },
     ],
   },
   {
@@ -72,9 +112,21 @@ const projects = [
     cardImage: tubeCard,
     cardRatio: 2.5,
     tabs: [
-      { label: "Изделие", images: [slideProduct, slideProductDrw] },
-      { label: "Пресс-форма", images: [slidePf, slidePfDrw] },
-      { label: "Фото", images: [slidePfPhoto] },
+      {
+        label: "Изделие",
+        images: [
+          pic(slideProduct, "Изделие"),
+          pic(slideProductDrw, "Эскиз изделия"),
+        ],
+      },
+      {
+        label: "Пресс-форма",
+        images: [
+          pic(slidePf, "Пресс-форма"),
+          pic(slidePfDrw, "Сборочный чертеж"),
+        ],
+      },
+      { label: "Фото", images: [pic(slidePfPhoto, "Фото")] },
     ],
   },
 ];
