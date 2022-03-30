@@ -20,6 +20,12 @@ import dishPf from "./public/dish/press_forma.jpg";
 import dishPfDrw from "./public/dish/sb_1.jpg";
 
 import tubeCard from "./public/tube/productCard.gif";
+import tubeProduct from "./public/tube/product.jpg";
+import tubeProductDrw from "./public/tube/product_drw.jpg";
+import tubePf from "./public/tube/pf.jpg";
+import tubePfDrw1 from "./public/tube/sb-1.jpg";
+import tubePfDrw2 from "./public/tube/sb-2.jpg";
+import tubePhoto from "./public/tube/IMG00032.jpg";
 
 //import StaticImageData from 'next/image'
 
@@ -115,18 +121,19 @@ const projects = [
       {
         label: "Изделие",
         images: [
-          pic(slideProduct, "Изделие"),
-          pic(slideProductDrw, "Эскиз изделия"),
+          pic(tubeProduct, "Изделие"),
+          pic(tubeProductDrw, "Эскиз изделия"),
         ],
       },
       {
         label: "Пресс-форма",
         images: [
-          pic(slidePf, "Пресс-форма"),
-          pic(slidePfDrw, "Сборочный чертеж"),
+          pic(tubePf, "Пресс-форма"),
+          pic(tubePfDrw1, "Сборочный чертеж 1"),
+          pic(tubePfDrw2, "Сборочный чертеж 2"),
         ],
       },
-      { label: "Фото", images: [pic(slidePfPhoto, "Фото")] },
+      { label: "Фото", images: [pic(tubePhoto, "Фото")] },
     ],
   },
 ];
