@@ -27,6 +27,13 @@ import tubePfDrw1 from "./public/tube/sb-1.jpg";
 import tubePfDrw2 from "./public/tube/sb-2.jpg";
 import tubePhoto from "./public/tube/IMG00032.jpg";
 
+import gearCard from "./public/gear/productCard.jpg";
+import gearProduct from "./public/gear/product.jpg";
+import gearProductDrw from "./public/gear/product_drw.jpg";
+import gearPf from "./public/gear/pf.jpg";
+import gearSb1 from "./public/gear/sb_1.jpg";
+import gearSb2 from "./public/gear/sb_2.jpg";
+
 //import StaticImageData from 'next/image'
 
 function pic(data: any, desc: string) {
@@ -40,7 +47,6 @@ const projects = [
       en: "slide",
     },
     cardImage: slideCard,
-    cardRatio: 2.12,
     tabs: [
       //{ label: "Изделие", images: [[slideProduct, 'Изделие'], [slideProductDrw, 'Эскиз изделия']] },
       {
@@ -66,7 +72,6 @@ const projects = [
       en: "shocker",
     },
     cardImage: shockerCard,
-    cardRatio: 2.1,
     tabs: [
       {
         label: "Изделие",
@@ -91,7 +96,6 @@ const projects = [
       en: "dish",
     },
     cardImage: dishCard,
-    cardRatio: 2,
     tabs: [
       {
         label: "Изделие",
@@ -116,7 +120,6 @@ const projects = [
       en: "tube",
     },
     cardImage: tubeCard,
-    cardRatio: 2.5,
     tabs: [
       {
         label: "Изделие",
@@ -134,6 +137,31 @@ const projects = [
         ],
       },
       { label: "Фото", images: [pic(tubePhoto, "Фото")] },
+    ],
+  },
+
+  {
+    name: {
+      ru: "Колесо зубчатое",
+      en: "gear",
+    },
+    cardImage: gearCard,
+    tabs: [
+      {
+        label: "Изделие",
+        images: [
+          pic(gearProduct, "Изделие"),
+          pic(gearProductDrw, "Эскиз изделия"),
+        ],
+      },
+      {
+        label: "Пресс-форма",
+        images: [
+          pic(gearPf, "Пресс-форма"),
+          pic(gearSb1, "Сборочный чертеж 1"),
+          pic(gearSb2, "Сборочный чертеж 2"),
+        ],
+      },
     ],
   },
 ];
