@@ -13,6 +13,11 @@ import shockerPfDrw1 from "./public/shocker/sb-1.jpg";
 import shockerE_2 from "./public/shocker/e-2.jpg";
 
 import dishCard from "./public/dish/productCard.gif";
+import dishProduct from "./public/dish/product.jpg";
+import dishProductDrw from "./public/dish/product_drw.jpg";
+import dishPf from "./public/dish/press_forma.jpg";
+import dishPfDrw from "./public/dish/sb_1.jpg";
+
 import tubeCard from "./public/tube/productCard.gif";
 
 const projects = [
@@ -53,9 +58,8 @@ const projects = [
     cardImage: dishCard,
     cardRatio: 2,
     tabs: [
-      { label: "Изделие", images: [slideProduct, slideProductDrw] },
-      { label: "Пресс-форма", images: [slidePf, slidePfDrw] },
-      { label: "Фото", images: [slidePfPhoto] },
+      { label: "Изделие", images: [dishProduct, dishProductDrw] },
+      { label: "Пресс-форма", images: [dishPf, dishPfDrw] },
     ],
   },
   {
