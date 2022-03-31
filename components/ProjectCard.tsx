@@ -20,19 +20,19 @@ export default function ProjectCard(props: Props) {
 
   const router = useRouter();
 
-  const href = `projects/${project.name.en}`;
+  const href = `/projects/${project.name.en}`;
 
-  const handleClick = (e: React.SyntheticEvent) => {
-    e.preventDefault();
-    router.push(href);
-  };
+  // const handleClick = (e: React.SyntheticEvent) => {
+  //   e.preventDefault();
+  //   router.push(href);
+  // };
 
   return (
     <Card className={styles.card}>
       <CardActionArea
         className={styles.cardActionArea}
         href={href}
-        onClick={handleClick}
+        //onClick={handleClick}
       >
         <CardContent className={styles.cardContent}>
           <Typography className={styles.cardTitle} variant="h6">

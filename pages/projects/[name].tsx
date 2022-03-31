@@ -14,18 +14,19 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
-import projects from "../../projects";
-import { typography } from "@mui/system";
+import ArrowButton from "../../components/ArrowButton";
 
-import styles from "../../styles/Home.module.css";
+import projects from "../../projects";
 
 const Projects = ({
   project,
+  projectIndex,
+  projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
   const { name } = router.query;
 
-  // console.log("projects: ", projects);
+  //console.log("projects: ", projects);
   // console.log("name = router.query: ", name);
   //const project = projects.find((project) => project.name.en === name)!;
 
@@ -77,16 +78,25 @@ const Projects = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Typography
-        variant="h5"
-        component="h1"
-        align="center"
-        style={{ marginBottom: "1rem" }}
-      >
-        {project!.name.ru}
-      </Typography>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <ArrowButton
+          type="left"
+          projectIndex={projectIndex}
+          projects={projects}
+        />
 
-      <Box>
+        <Typography variant="h5" component="h1" align="center">
+          {project!.name.ru}
+        </Typography>
+
+        <ArrowButton
+          type="right"
+          projectIndex={projectIndex}
+          projects={projects}
+        />
+      </div>
+
+      <Box style={{ marginTop: "1rem" }}>
         <TabContext value={value}>
           <TabList onChange={handleChange} centered={true}>
             {tabs}
@@ -102,10 +112,15 @@ export default Projects;
 
 export async function getStaticProps(context: any) {
   const { name } = context.params;
-  const project = projects.find((project) => project.name.en === name)!;
+  const projectIndex = projects.findIndex(
+    (project) => project.name.en === name
+  )!;
+
+  //const project = projects.find((project) => project.name.en === name)!;
+  const project = projects[projectIndex];
 
   return {
-    props: { project }, // will be passed to the page component as props
+    props: { project, projectIndex, projects }, // will be passed to the page component as props
   };
 }
 
