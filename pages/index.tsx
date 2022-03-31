@@ -4,6 +4,8 @@ import Image from "next/image";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 
 import corpusPhoto from "../public/corpus/IMG_1947.jpg";
 
@@ -43,7 +45,11 @@ const Home: NextPage = () => {
           пресс-форм.
         </Typography>
 
-        <Image src={corpusPhoto} />
+        <Card>
+          <CardContent>
+            <Image src={corpusPhoto} />
+          </CardContent>
+        </Card>
       </div>
     </>
   );
