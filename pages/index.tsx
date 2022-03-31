@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 
         <Card>
           <CardContent>
-            <Image src={corpusPhoto} />
+            <Image src={corpusPhoto} alt="Фото" loading="eager" priority />
           </CardContent>
         </Card>
       </div>
