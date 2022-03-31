@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.container}>
-        <Typography align="center" variant="body1" style={{ color: "#1a237e" }}>
+        <Typography align="center" variant="h6" style={{ color: "#1a237e" }}>
           Добро пожаловать на персональный сайт инженера-конструктора
         </Typography>
 
