@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           variantMapping={{ h4: "h1" }}
           style={{ color: "#1a237e", margin: "2rem auto" }}
         >
-          Пресс-формы для литья пласмассовых изделий
+          Пресс-формы для литья пластмассовых изделий
         </Typography>
 
         <Typography variant="body1" style={{ textIndent: "2em" }}>
