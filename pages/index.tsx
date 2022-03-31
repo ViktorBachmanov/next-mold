@@ -1,8 +1,11 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Typography from "@mui/material/Typography";
+
+import corpusPhoto from "../public/corpus/IMG_1947.jpg";
 
 const Home: NextPage = () => {
   return (
@@ -34,11 +37,13 @@ const Home: NextPage = () => {
 
         <Typography
           variant="body1"
-          style={{ textIndent: "2em", marginTop: "1rem" }}
+          style={{ textIndent: "2em", margin: "1rem 0 2rem" }}
         >
           В разделе &quot;Проекты&quot; представлены некоторые из реализованных
           пресс-форм.
         </Typography>
+
+        <Image src={corpusPhoto} />
       </div>
     </>
   );
