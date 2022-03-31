@@ -183,8 +183,11 @@ const projects = [
         images: [
           pic(sleeveProduct, "Изделие"),
           pic(sleeveProductDrw, "Эскиз изделия"),
-          pic(sleeveFlow, "Анализ литья"),
         ],
+      },
+      {
+        label: "Анализ",
+        images: [pic(sleeveFlow, "Анализ литья")],
       },
       {
         label: "Пресс-форма",
