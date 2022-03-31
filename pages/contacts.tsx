@@ -12,7 +12,7 @@ const Contacts: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Typography variant="h5" align="center" style={{ lineHeight: "200%" }}>
+      <Typography variant="h6" align="center" style={{ lineHeight: "200%" }}>
         Инженер-конструктор
         <br />
         Виктор Бачманов
