@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Пресс-формы для литья пласмассовых изделий</title>
+        <title>Пресс-формы для литья пластмассовых изделий</title>
         <meta name="description" content="Пресс-формы, литье пластмасс" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
