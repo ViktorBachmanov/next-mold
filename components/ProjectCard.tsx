@@ -35,7 +35,7 @@ export default function ProjectCard(props: Props) {
         onClick={handleClick}
       >
         <CardContent className={styles.cardContent}>
-          <Typography className={styles.cardTitle}>
+          <Typography className={styles.cardTitle} variant="h6">
             {project.name.ru}
           </Typography>
           <div className={styles.imageWrapper}>
