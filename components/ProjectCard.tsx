@@ -1,7 +1,5 @@
 import React from "react";
 
-import { useRouter } from "next/router";
-
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
@@ -11,28 +9,25 @@ import Image from "next/image";
 
 import styles from "../styles/ProjectCard.module.css";
 
-interface Props {
-  project: any;
-}
+// interface Props {
+//   project: any;
+//   href: string;
+//   onClick: any;
+// }
 
-export default function ProjectCard(props: Props) {
-  const { project } = props;
-
-  const router = useRouter();
-
-  const href = `/projects/${project.name.en}`;
-
-  // const handleClick = (e: React.SyntheticEvent) => {
-  //   e.preventDefault();
-  //   router.push(href);
-  // };
+const ProjectCard = React.forwardRef<any, any>(function ProjectCard(
+  props,
+  ref
+) {
+  const { project, href, onClick } = props;
 
   return (
     <Card className={styles.card}>
       <CardActionArea
         className={styles.cardActionArea}
         href={href}
-        //onClick={handleClick}
+        ref={ref}
+        onClick={onClick}
       >
         <CardContent className={styles.cardContent}>
           <Typography className={styles.cardTitle} variant="h6">
@@ -45,4 +40,6 @@ export default function ProjectCard(props: Props) {
       </CardActionArea>
     </Card>
   );
-}
+});
+
+export default ProjectCard;

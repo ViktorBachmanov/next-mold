@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
 import Grid from "@mui/material/Grid";
 
@@ -25,7 +26,9 @@ const Projects: NextPage = () => {
       >
         {projects.map((project) => (
           <Grid item key={project.name.en}>
-            <ProjectCard project={project} />
+            <Link href={`/projects/${project.name.en}`} passHref>
+              <ProjectCard project={project} />
+            </Link>
           </Grid>
         ))}
       </Grid>
