@@ -1,5 +1,7 @@
 import React from "react";
 
+import Link from "next/link";
+
 import IconButton from "@mui/material/IconButton";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
@@ -47,9 +49,11 @@ function ArrowButton(props: Props) {
 
   return (
     <Tooltip title={title} placement={type}>
-      <IconButton size="large" disabled={disabled} href={href}>
-        {icon}
-      </IconButton>
+      <Link href={href} passHref>
+        <IconButton size="large" disabled={disabled}>
+          {icon}
+        </IconButton>
+      </Link>
     </Tooltip>
   );
 }
