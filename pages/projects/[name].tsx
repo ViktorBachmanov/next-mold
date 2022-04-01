@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import type { NextPage, InferGetStaticPropsType } from "next";
-import { useRouter } from "next/router";
+import React, { useState, useEffect } from "react";
+import type { InferGetStaticPropsType } from "next";
+//import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -23,14 +23,25 @@ const Projects = ({
   projectIndex,
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const router = useRouter();
-  const { name } = router.query;
+  //const router = useRouter();
+  //const { name } = router.query;
 
   //console.log("projects: ", projects);
   // console.log("name = router.query: ", name);
   //const project = projects.find((project) => project.name.en === name)!;
 
   const [value, setValue] = useState("Изделие");
+
+  const isTabExist = React.useMemo(
+    () => project.tabs.find((tab) => tab.label === value),
+    [project, value]
+  );
+
+  useEffect(() => {
+    if (!isTabExist) {
+      setValue("Изделие");
+    }
+  }, [isTabExist]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
