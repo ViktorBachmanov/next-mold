@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import type { InferGetStaticPropsType } from "next";
-//import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 
-//import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
@@ -23,13 +21,6 @@ const Projects = ({
   projectIndex,
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  //const router = useRouter();
-  //const { name } = router.query;
-
-  //console.log("projects: ", projects);
-  // console.log("name = router.query: ", name);
-  //const project = projects.find((project) => project.name.en === name)!;
-
   const [value, setValue] = useState("Изделие");
 
   const isTabExist = React.useMemo(
