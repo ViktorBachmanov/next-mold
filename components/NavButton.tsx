@@ -11,7 +11,6 @@ export default function NavButton(props: Props) {
   const { href, label } = props;
   const router = useRouter();
 
-  //const color = router.asPath === href ? "success" : "inherit";
   const isActive =
     router.asPath === href ||
     (router.asPath.includes("projects") && href === "/projects");

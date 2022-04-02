@@ -42,8 +42,6 @@ import sleevePf from "./public/sleeve/pf.jpg";
 import sleeveSb1 from "./public/sleeve/sb_1.jpg";
 import sleeveSb2 from "./public/sleeve/sb_2.jpg";
 
-//import StaticImageData from 'next/image'
-
 function pic(data: any, desc: string) {
   return { data, desc };
 }
@@ -56,7 +54,6 @@ const projects = [
     },
     cardImage: slideCard,
     tabs: [
-      //{ label: "Изделие", images: [[slideProduct, 'Изделие'], [slideProductDrw, 'Эскиз изделия']] },
       {
         label: "Изделие",
         images: [
@@ -202,10 +199,3 @@ const projects = [
 ];
 
 export default projects;
-
-// helper functions
-
-// function getPic(isDarkMode: boolean, lightPic: string, darkPic?: string) {
-
-//   return isDarkMode && darkPic ? darkPic : lightPic
-// }

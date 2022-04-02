@@ -9,12 +9,6 @@ import Image from "next/image";
 
 import styles from "../styles/ProjectCard.module.css";
 
-// interface Props {
-//   project: any;
-//   href: string;
-//   onClick: any;
-// }
-
 const ProjectCard = React.forwardRef<any, any>(function ProjectCard(
   props,
   ref
