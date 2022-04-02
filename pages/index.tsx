@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
@@ -32,17 +33,16 @@ const Home: NextPage = () => {
           Пресс-формы для литья пластмассовых изделий
         </Typography>
 
-        <Typography variant="body1" style={{ textIndent: "2em" }}>
-          Здесь Вы можете заказать проектирование пресс-формы
-          (холодноканальной), а также и самого изделия.
-        </Typography>
-
         <Typography
+          align="center"
           variant="body1"
-          style={{ textIndent: "2em", margin: "1rem 0 2rem" }}
+          style={{ margin: "1rem 0 2rem" }}
         >
-          В разделе &quot;Проекты&quot; представлены некоторые из реализованных
-          пресс-форм.
+          В разделе{" "}
+          <Link href="/projects">
+            <a style={{ color: "blue" }}>&quot;Проекты&quot;</a>
+          </Link>{" "}
+          представлены некоторые из реализованных пресс-форм
         </Typography>
 
         <Card>
