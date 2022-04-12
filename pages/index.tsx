@@ -16,6 +16,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Пресс-формы для литья пластмассовых изделий</title>
         <meta name="description" content="Пресс-формы, литье пластмасс" />
+        <meta
+          name="keywords"
+          content="Пресс-формы, литье пластмасс, проектирование, дизайн, конструирование, инженер-конструктор"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
