@@ -14,6 +14,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
+        <meta name="yandex-verification" content="f56aa98d8eeb568e" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Пресс-формы, литье пластмасс" />
         <title>Пресс-формы для литья пластмассовых изделий</title>
