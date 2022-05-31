@@ -14,9 +14,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Пресс-формы для литья пластмассовых изделий</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Пресс-формы, литье пластмасс" />
+        <title>Пресс-формы для литья пластмассовых изделий</title>
         <meta
           name="keywords"
           content="Пресс-формы, литье пластмасс, проектирование, дизайн, конструирование, инженер-конструктор"

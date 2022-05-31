@@ -13,9 +13,9 @@ const Projects: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Примеры пресс-форм</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Примеры пресс-форм" />
+        <title>Примеры пресс-форм</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

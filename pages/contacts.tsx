@@ -6,8 +6,9 @@ const Contacts: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Контакты</title>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Контакты" />
+        <title>Контакты</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
