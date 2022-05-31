@@ -73,6 +73,7 @@ const Projects = ({
     <>
       <Head>
         <title>{`Пресс-форма "${project!.name.ru}"`}</title>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
           name="description"
           content={`Пресс-форма "${project!.name.ru}"`}
